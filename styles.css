@@ -399,15 +399,13 @@ footer {
 /* Sizing with width and height */
 
 /* For the corgi graphic */
-/* 
-    TO DO: add styles to the image in this section that will:
-        - turn this into a block-level element
-        - make this display at 200px wide
-        - set the height to auto
-        - add margin to center this element
-        - add the small filter drop shadow from the CSS variables in the root
-*/
-#section3 img {}
+#section3 img {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: var(--filter-shadow-sm);
+}
 
 #section3 div::before {
     content: "";
@@ -434,20 +432,18 @@ footer {
     box-shadow: var(--box-shadow-sm);
 }
 
-/* 
-    TO DO: add styles to the after pseudo-element on the div in this section that will:
-        - add content (empty string)
-        - make this display as a block-level element
-        - make this 50px wide
-        - make this 50px tall
-        - make the background the lt-blue color
-        - turn this square div into a circle
-        - set the position to relative
-        - give this a z-index of 2
-        - move this up from its original location by 50px
-        - move this to the right from its original location by 25px
-*/
-#section3 div::after {}
+#section3 div::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--lt-blue);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    top: -50px;
+    left: 25px;
+}
 
 
 /* ------------- SECTION 4 STYLES ---------------- */
@@ -459,15 +455,9 @@ footer {
 }
 
 /* For the second paragraph */
-/* 
-    TO DO: add styles to the last paragraph in this section that will:
-        - add margin:
-            - top: 1rem
-            - right: 0
-            - bottom: 1rem
-            - left: 0
-*/
-#section4 p:last-of-type {}
+#section4 p:last-of-type {
+    margin: 1rem 0;
+}
 
 /* ------------- SECTION 5 STYLES ---------------- */
 /* Background image default behavior */
@@ -496,13 +486,9 @@ footer {
 }
 
 /* For the third div, let's include the a background color, allow the image to tile, but center the tiling in the container */
-/* 
-    TO DO: add styles to the div with an ID of bg-img-3 in this section that will:
-        - add the lt-blue color to the background
-        - center the image pattern in the container
-        - add the puppy-photo as a repeating background to the container
-*/
-#bg-img-3 {}
+#bg-img-3 {
+    background: var(--lt-blue) center url("images/puppy-photo.jpg");    
+}
 
 /* For the fourth div, let's style this like the second div, but let's change the height of the div to 100px, so it fits the height of the image. It will make it look like the image and div are the same height */
 #section6 #bg-img-4 {
@@ -521,13 +507,9 @@ footer {
 /* Background patterns with images and CSS */
 
 /* For the first div, let's add the pattern from the images folder called wood, it is from Transparent Textures. Include the lt-gray background color as well */
-/* 
-    TO DO: add styles to the div with an ID of pattern1 in this section that will:
-        - set the background color to light-gray
-        - scale the background image to 110% 
-        - add the wood background texture from the images folder
-*/
-#pattern1 {}
+#pattern1 {
+    background: var(--light-gray) 110% url("images/wood.png");
+}
 
 /* For the second div, the pattern is from from Hero Pattern. These actually give you SVG code to paste into your CSS */
 #pattern2 {
@@ -564,11 +546,6 @@ footer {
 /* Floating content with CSS */
 
 /* Let's tell our images to float to the left. Remember, they'll sort of pile up next to each other in the container, but only if they're narrow enough to fit! */
-/* 
-    TO DO: add styles to the image with the ID of corgi in this section that will:
-        - float this image to the left
-        - add 1 rem of margin to the right of the image
-*/
 #corgi {
     margin-right: 1rem;
     float: left;
@@ -578,18 +555,14 @@ footer {
     margin-top: 0.5rem;
 }
 
-/* 
-    TO DO: add styles to the image with an ID of dog-house in this section that will:
-        - float the image to the right
-*/
-#dog-house {}
+#dog-house {
+    float: right;
+}
 
 /* When you use floats, you have to be sure to clear them so that the rest of your page after the floats displays normally. Let's use the display section to clear the floats (because it is the next tag outside of our container in the HTML) */
-/* 
-    TO DO: add styles to the display section that will:
-        - clear any floats
-*/
-#section9 {}
+#section9 {
+    clear: both;
+}
 
 /* ------------- SECTION 9 STYLES ---------------- */
 
